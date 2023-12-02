@@ -8,5 +8,9 @@
        public virtual Vehicle? Vehicle { get; set; }
        public int CustomerId { get; set; }
        public virtual Customer? Customer { get; set; }
+       public DateTime DateCreated { get; set; }
+
+
+
     }
 }

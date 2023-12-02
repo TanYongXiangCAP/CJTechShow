@@ -32,7 +32,10 @@ namespace CarRentalManagement.Server.Controllers
         //public async Task<ActionResult<IEnumerable<Vehicles>>> GetVehicles()
         public async Task<IActionResult> GetVehicles()
         {
-            var Vehicles = await _unitOfWork.Vehicles.GetAll();
+            var Vehicles = await _unitOfWork.Vehicles.GetAll(includes: q => q.Include(x =>
+            x.Make).Include(x => x.Model).Include(x => x.Colour));
+
+
             return Ok(Vehicles);
             //return await _context.Vehicles.ToListAsync();
         }

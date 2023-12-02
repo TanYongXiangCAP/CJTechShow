@@ -2,8 +2,60 @@
 
 <PageTitle>Index</PageTitle>
 
-<h1>Hello, world!</h1>
+<style>
+    /* Define a unique and bold font for the passes information */
+    .pass-info {
+        font-family: 'YourUniqueFont', sans-serif;
+        font-weight: bold;
+    }
 
-Welcome to Christopher Ray new app.
+    /* Style for the "Buy Tickets" button */
+    .buy-tickets-button {
+        font-family: 'YourUniqueFont', sans-serif;
+        font-weight: bold;
+        font-size: 16px;
+        padding: 10px 20px;
+        background-color: #4CAF50; 
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+    /* Add hover effect for the button */
+    .buy-tickets-button:hover {
+        background-color: #45a049;
+    }
+</style>
+
+<h1>CJ TECH SHOW</h1>
+
+The TECH Show 2023 is back! With more than 150 brands ranging from tech gadgets, smart-home must-haves & lifestyle products,
+get ready to unlock unbelievable 11.11 deals offline where you can touch, feel & get expert advice live in person.
+
+<SurveyPrompt Title="Download your E-Brochure Now!" />
+
+<h2 class="pass-info">Visitor Passes</h2>
+<p class="pass-info">
+    Visitor passes cost $100 and include:
+</p>
+<ul class="pass-info">
+    <li>Access to all booths and talks</li>
+    <li>Access to dinner buffet</li>
+    <li>FREE Tech Bag</li>
+    <li>VIP Seating for exclusive workshops</li>
+</ul>
+
+<h2 class="pass-info">Vendor Passes</h2>
+<p class="pass-info">
+    Vendor passes cost $80 and include:
+</p>
+<ul class="pass-info">
+    <li>Access to all booths and talks</li>
+    <li>Access to dinner buffet</li>
+    <li>Exclusive workshops</li>
+    <li>FREE Tech Bag</li>
+</ul>
+
+<!-- "Buy Tickets" button -->
+<button class="buy-tickets-button" onclick="location.href='/buy-tickets'">Buy Tickets</button>

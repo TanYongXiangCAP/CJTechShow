@@ -8,4 +8,5 @@
         public string? EmailAddress { get; set; }
         public virtual List<Booking>? Bookings { get; set; }
     }
-}
+
+    }

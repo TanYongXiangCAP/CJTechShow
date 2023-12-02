@@ -1,0 +1,85 @@
+﻿@page "/event information/"
+@inject HttpClient _client
+@inject IJSRuntime js
+@attribute [Authorize]
+
+<h3 class="card-title">Event Information</h3>
+
+<!-- Add spacing between sections -->
+<br />
+
+<p>
+    Welcome to the IT Tech Show, the ultimate gathering for tech enthusiasts, industry professionals, and innovators!
+    Join us for an immersive experience where cutting-edge technology takes center stage.
+</p>
+
+<!-- Event Details -->
+<h4>Event Details</h4>
+<ul>
+    <li>Date: 11, 12, 13 November 2023</li>
+    <li>Time: 3pm</li>
+    <li>Venue: Suntec City Convention Centre, Suntec</li>
+</ul>
+
+<!-- Highlights -->
+<h4>Highlights</h4>
+<ul>
+    <li>Explore the Latest Innovations</li>
+    <li>Engage with Industry Experts</li>
+    <li>Networking Opportunities</li>
+    <li>Tech Showcases</li>
+</ul>
+
+<!-- Registration -->
+<h4>Registration</h4>
+<p>
+    Secure your spot at the IT Tech Show by registering today! Don't miss out on this unparalleled opportunity to be at the forefront of technological innovation.
+</p>
+<button class="btn btn-primary">Register Now</button>
+
+<!-- COVID-19 Safety Measures -->
+<h4>COVID-19 Safety Measures</h4>
+<p>
+    The health and safety of our participants are our top priorities. Rest assured, we are implementing rigorous safety measures to ensure a secure and enjoyable event experience for all.
+</p>
+
+<!-- Contact Us -->
+<h4>Contact Us</h4>
+<p>
+    For inquiries and additional information, please contact our event organizers:
+</p>
+<ul>
+    <li>Email: CJTechShows@gmail.com</li>
+    <li>Phone: 9696 9912</li>
+</ul>
+
+<!-- Follow Us -->
+<h4>Follow Us</h4>
+<p>
+    Stay updated on the latest event news and announcements by following us on social media:
+</p>
+<button class="btn btn-primary">Facebook</button>
+<button class="btn btn-primary">Twitter</button>
+<button class="btn btn-primary">TikTok</button>
+<button class="btn btn-primary">Instagram</button>
+
+<br />
+
+<p>
+    Join us at the IT Tech Show and be part of the future of technology!
+</p>
+
+<br />
+@code {
+    private List<Booking> Bookings;
+
+    protected override async Task OnInitializedAsync()
+    {
+        Bookings = await _client.GetFromJsonAsync<List<Booking>>(Endpoints.BookingsEndpoint);
+    }
+
+    private async Task DeleteBooking(Booking booking)
+    {
+        var confirm = await js.InvokeAsync<bool>("confirm", $"Do you want to delete {booking.Id}?");
+    }
+}
