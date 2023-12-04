@@ -70,16 +70,3 @@
 </p>
 
 <br />
-@code {
-    private List<Booking> Bookings;
-
-    protected override async Task OnInitializedAsync()
-    {
-        Bookings = await _client.GetFromJsonAsync<List<Booking>>(Endpoints.BookingsEndpoint);
-    }
-
-    private async Task DeleteBooking(Booking booking)
-    {
-        var confirm = await js.InvokeAsync<bool>("confirm", $"Do you want to delete {booking.Id}?");
-    }
-}

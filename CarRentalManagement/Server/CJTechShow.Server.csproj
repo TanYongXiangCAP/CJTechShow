@@ -14,8 +14,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Client\CarRentalManagement.Client.csproj" />
-    <ProjectReference Include="..\Shared\CarRentalManagement.Shared.csproj" />
+    <ProjectReference Include="..\Client\CJTechShow.Client.csproj" />
+    <ProjectReference Include="..\Shared\CJTechShow.Shared.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,6 +25,10 @@
     <PackageReference Include="Microsoft.AspNetCore.ApiAuthorization.IdentityServer" Version="7.0.13" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.13" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.13" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
   </ItemGroup>
 
 </Project>

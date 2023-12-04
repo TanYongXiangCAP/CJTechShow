@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarRentalManagement.Server", "CarRentalManagement\Server\CarRentalManagement.Server.csproj", "{323B4A13-61CB-474E-86AD-0F8B6C0B7BD9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CJTechShow.Server", "CarRentalManagement\Server\CJTechShow.Server.csproj", "{323B4A13-61CB-474E-86AD-0F8B6C0B7BD9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarRentalManagement.Client", "CarRentalManagement\Client\CarRentalManagement.Client.csproj", "{B3566CCA-2C2D-428F-B530-4C5B2EC20818}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CJTechShow.Client", "CarRentalManagement\Client\CJTechShow.Client.csproj", "{B3566CCA-2C2D-428F-B530-4C5B2EC20818}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarRentalManagement.Shared", "CarRentalManagement\Shared\CarRentalManagement.Shared.csproj", "{2740DE6F-F7E6-4F7C-9835-51A020AA8840}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CJTechShow.Shared", "CarRentalManagement\Shared\CJTechShow.Shared.csproj", "{2740DE6F-F7E6-4F7C-9835-51A020AA8840}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
